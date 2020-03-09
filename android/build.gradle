@@ -20,6 +20,9 @@ buildscript {
 }
 allprojects {
     repositories {
+//uhutuboot-auto-begin-rn_url
+maven {url "$rootDir/../node_modules/react-native/android"}
+//uhutuboot-auto-end-rn_url
         flatDir {
             dirs 'libs'
             // lib module compile aar
