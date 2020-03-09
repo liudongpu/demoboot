@@ -7,6 +7,8 @@
 //
 
 #import "DemoViewController.h"
+#import <React/RCTRootView.h>
+
 
 @interface DemoViewController ()
 
@@ -18,13 +20,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-    label.text = @"Hello World!";
-    label.font = [UIFont systemFontOfSize:26];
-    label.textColor = [UIColor redColor];
-    [label sizeToFit];
-    label.center = CGPointMake(self.view.frame.size.width / 2, 0.4 * self.view.frame.size.height);
-    [self.view addSubview:label];
+    
+    NSLog(@"High Score Button Pressed");
+    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.bundle?platform=ios"];
+
+    RCTRootView *rootView =
+      [[RCTRootView alloc] initWithBundleURL: jsCodeLocation
+                                  moduleName: @"rn61"
+                           initialProperties:
+                             @{
+                               @"scores" : @[
+                                 @{
+                                   @"name" : @"Alex",
+                                   @"value": @"42"
+                                  },
+                                 @{
+                                   @"name" : @"Joel",
+                                   @"value": @"10"
+                                 }
+                               ]
+                             }
+                               launchOptions: nil];
+    //UIViewController *vc = [[UIViewController alloc] init];
+    self.view = rootView;
 }
 
 

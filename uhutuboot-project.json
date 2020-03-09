@@ -1,3 +1,4 @@
 {
-    "flagEnableReactNative":true
+    "flagEnableReactNative":true,
+    "projectName":"demoboot"
 }
