@@ -1,0 +1,20 @@
+//
+//  demoboot-Prefix.pch
+//  demoboot
+//
+//  Created by liudongpu on 2020/03/09.
+//  Copyright © 2020 Alibaba. All rights reserved.
+//
+
+#ifndef demoboot_Prefix_pch
+#define demoboot_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "demoboot-mPaaS-Headers.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+
+#endif /* demoboot_Prefix_pch */
